@@ -20,6 +20,21 @@ app.get('/', function (req, res) {
     res.render('index.jade', {layout: false});
 });
 
+io.configure(function () {
+    io.enable('browser client minification');
+    io.enable('browser client etag');
+    io.enable('browser client gzip');
+    io.set('log level', 1);
+    io.set('polling duration', 3);
+
+    io.set('transport', [
+      'websocket',
+      'xhr-polling',
+      'flashsocket',
+      'htmlfile',
+      'json-polling']);
+});
+
 io.on('connection', function (client) {
 
     client.on('paint', function (position) {
