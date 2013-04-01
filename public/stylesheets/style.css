@@ -1,0 +1,13 @@
+body {
+    background: #000000;
+    padding   : 0;
+    margin    : 0;
+}
+
+#drawing {
+    display: block;
+    background: #e1e1e1;
+    width : 95%;
+    height: 600px;
+    margin: 1% auto;
+}

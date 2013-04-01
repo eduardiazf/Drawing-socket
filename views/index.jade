@@ -1,0 +1,18 @@
+!!! 5
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        title Drawing Realtime
+        meta(name="author", content="Eduardo Diaz (@eduardo_l_diaz)")
+        meta(name="viewport", content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+        meta(name="format-detection", content="telephone=no")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(http-equiv="cleartype", content="on")
+        link(rel="stylesheet", href="stylesheets/style.css")
+    body
+        .wrapper
+            button#reset(type="button") Reset
+            canvas#drawing
+
+        script(src="socket.io/socket.io.js")
+        script(src="javascripts/main.js")
